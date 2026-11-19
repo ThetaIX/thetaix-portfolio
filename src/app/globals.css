@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #f3f0e9;
+  --color-ink: #20211f;
+  --color-lime: #d7ff3f;
+  --color-coral: #ff765e;
+  --color-muted: #a6a39b;
+  --color-border: color-mix(in srgb, var(--color-ink) 18%, transparent);
+  --color-focus: var(--color-coral);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+:root.dark {
+  --color-paper: #20211f;
+  --color-ink: #f3f0e9;
+  --color-lime: #d7ff3f;
+  --color-coral: #ff8b76;
+  --color-muted: #b7b4aa;
+  --color-border: color-mix(in srgb, var(--color-ink) 24%, transparent);
+  --color-focus: var(--color-lime);
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-lime: var(--color-lime);
+  --color-coral: var(--color-coral);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
