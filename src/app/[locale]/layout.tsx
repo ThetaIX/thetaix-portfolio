@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { hasLocale } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 import { routing, type Locale } from "@/i18n/routing";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -48,6 +51,17 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(requestedLocale as Locale);
+  const messages = await getMessages();
 
-  return <div data-locale={requestedLocale}>{children}</div>;
+  return (
+    <NextIntlClientProvider messages={messages}>
+      <div className="site-shell" data-locale={requestedLocale}>
+        <Header locale={requestedLocale as Locale} />
+        <main id="main-content" className="site-main">
+          {children}
+        </main>
+        <Footer locale={requestedLocale as Locale} />
+      </div>
+    </NextIntlClientProvider>
+  );
 }

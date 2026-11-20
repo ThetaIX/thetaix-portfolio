@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
 import { getLocale } from "next-intl/server";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const locale = await getLocale();
+  const themeScript = `(function(){try{var theme=localStorage.getItem("thetaix-theme");if(theme==="dark"||(theme!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark");}else{document.documentElement.classList.remove("dark");}}catch(e){}})();`;
 
   return (
     <html
@@ -39,6 +41,13 @@ export default async function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeScript }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

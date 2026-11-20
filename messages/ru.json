@@ -6,5 +6,26 @@
   "foundation": {
     "title": "Ilya Kuzin",
     "description": "Frontend Developer"
+  },
+  "navigation": {
+    "work": "Work",
+    "playground": "Playground",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "skipToContent": "Перейти к основному содержимому"
+  },
+  "controls": {
+    "language": "Язык",
+    "switchToRu": "Переключить на русский",
+    "switchToEn": "Переключить на английский",
+    "theme": "Тема",
+    "lightTheme": "Включить светлую тему",
+    "darkTheme": "Включить тёмную тему"
+  },
+  "footer": {
+    "role": "Frontend Developer",
+    "copyright": "© {year} Ilya Kuzin"
   }
 }

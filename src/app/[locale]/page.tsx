@@ -4,9 +4,10 @@ export default async function HomePage() {
   const t = await getTranslations("foundation");
 
   return (
-    <main>
+    <div className="foundation-main">
+      <span id="work" className="sr-only" />
       <h1 className="sr-only">{t("title")}</h1>
       <p className="sr-only">{t("description")}</p>
-    </main>
+    </div>
   );
 }
