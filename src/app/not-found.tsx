@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 export default async function NotFound() {
   const t = await getTranslations({ locale: "ru", namespace: "notFound" });
@@ -9,9 +10,9 @@ export default async function NotFound() {
       <h1 id="not-found-title">{t("title")}</h1>
       <p>{t("description")}</p>
       <div className="not-found-actions">
-        <a className="primary-action" href="/ru">
+        <Link className="primary-action" href="/ru">
           {t("backHome")}
-        </a>
+        </Link>
       </div>
     </section>
   );

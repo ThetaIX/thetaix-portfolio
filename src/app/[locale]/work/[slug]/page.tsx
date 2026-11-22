@@ -43,6 +43,7 @@ export async function generateMetadata({
       alternateLocale: locale === "ru" ? ["en_US"] : ["ru_RU"],
     },
     alternates: {
+      canonical: `/${locale}/work/${project.key}`,
       languages: {
         ru: `/ru/work/${project.key}`,
         en: `/en/work/${project.key}`,

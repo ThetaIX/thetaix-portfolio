@@ -42,6 +42,7 @@ export async function generateMetadata({
       alternateLocale: locale === "ru" ? ["en_US"] : ["ru_RU"],
     },
     alternates: {
+      canonical: `/${locale}/playground/${slug}`,
       languages: {
         ru: `/ru/playground/${slug}`,
         en: `/en/playground/${slug}`,

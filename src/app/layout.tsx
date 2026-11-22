@@ -24,6 +24,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://thetaix-portfolio.vercel.app"),
   title: "Ilya Kuzin — Frontend Developer",
   description: "Portfolio of Ilya Kuzin, a frontend developer.",
 };
