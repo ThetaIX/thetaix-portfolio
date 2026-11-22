@@ -86,6 +86,7 @@ export function CursorLab({ labels }: CursorLabProps) {
         onPointerMove={handleMove}
         onPointerLeave={() => setVisible(false)}
         aria-label={labels.hoverZones}
+        role="group"
       >
         {enabled && visible && !touchDevice ? (
           <span

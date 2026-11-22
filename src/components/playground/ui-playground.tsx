@@ -46,6 +46,8 @@ export function UiPlayground({ labels }: UiPlaygroundProps) {
   const [selectedCard, setSelectedCard] = useState<"one" | "two" | null>(null);
   const [loading, setLoading] = useState(false);
   const timeoutRef = useRef<number | null>(null);
+  const dropdownTriggerRef = useRef<HTMLButtonElement>(null);
+  const dropdownMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => () => {
     if (timeoutRef.current !== null) window.clearTimeout(timeoutRef.current);
@@ -54,6 +56,18 @@ export function UiPlayground({ labels }: UiPlaygroundProps) {
   function startLoading() {
     setLoading(true);
     timeoutRef.current = window.setTimeout(() => setLoading(false), 1800);
+  }
+
+  function openDropdown() {
+    setDropdownOpen(true);
+    window.requestAnimationFrame(() => {
+      dropdownMenuRef.current?.querySelector<HTMLButtonElement>('[role="menuitem"]')?.focus();
+    });
+  }
+
+  function closeDropdown() {
+    setDropdownOpen(false);
+    dropdownTriggerRef.current?.focus();
   }
 
   return (
@@ -81,12 +95,36 @@ export function UiPlayground({ labels }: UiPlaygroundProps) {
         <h2>{labels.tabs}</h2>
         <div className="demo-tabs" role="tablist" aria-label={labels.tabs}>
           {(["one", "two", "three"] as const).map((option) => (
-            <button key={option} type="button" role="tab" aria-selected={tab === option} onClick={() => setTab(option)}>
+            <button
+              key={option}
+              id={`ui-tab-${option}`}
+              type="button"
+              role="tab"
+              tabIndex={tab === option ? 0 : -1}
+              aria-selected={tab === option}
+              aria-controls="ui-tab-panel"
+              onClick={() => setTab(option)}
+              onKeyDown={(event) => {
+                const options = ["one", "two", "three"] as const;
+                const currentIndex = options.indexOf(option);
+                let nextIndex = currentIndex;
+                if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % options.length;
+                if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + options.length) % options.length;
+                if (event.key === "Home") nextIndex = 0;
+                if (event.key === "End") nextIndex = options.length - 1;
+                if (nextIndex !== currentIndex || event.key === "Home" || event.key === "End") {
+                  event.preventDefault();
+                  const next = options[nextIndex];
+                  setTab(next);
+                  document.getElementById(`ui-tab-${next}`)?.focus();
+                }
+              }}
+            >
               {option === "one" ? labels.tabOne : option === "two" ? labels.tabTwo : labels.tabThree}
             </button>
           ))}
         </div>
-        <p role="tabpanel">
+        <p id="ui-tab-panel" role="tabpanel" aria-labelledby={`ui-tab-${tab}`}>
           {tab === "one" ? labels.tabOneContent : tab === "two" ? labels.tabTwoContent : labels.tabThreeContent}
         </p>
       </section>
@@ -99,14 +137,46 @@ export function UiPlayground({ labels }: UiPlaygroundProps) {
 
       <section className="ui-demo">
         <h2>{labels.dropdown}</h2>
-        <div className="demo-dropdown" onKeyDown={(event) => { if (event.key === "Escape") setDropdownOpen(false); }}>
-          <button type="button" aria-expanded={dropdownOpen} onClick={() => setDropdownOpen((current) => !current)}>
+        <div
+          className="demo-dropdown"
+          onKeyDown={(event) => {
+            if (event.key === "Escape") closeDropdown();
+            if (event.key === "ArrowDown" && event.target === dropdownTriggerRef.current) {
+              event.preventDefault();
+              openDropdown();
+            }
+          }}
+        >
+          <button
+            ref={dropdownTriggerRef}
+            type="button"
+            aria-haspopup="menu"
+            aria-controls="demo-dropdown-menu"
+            aria-expanded={dropdownOpen}
+            onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}
+          >
             {dropdownValue}
           </button>
           {dropdownOpen ? (
-            <div role="menu">
-              {[labels.optionOne, labels.optionTwo, labels.optionThree].map((option) => (
-                <button key={option} type="button" role="menuitem" onClick={() => { setDropdownValue(option); setDropdownOpen(false); }}>
+            <div id="demo-dropdown-menu" ref={dropdownMenuRef} role="menu" aria-label={labels.dropdown}>
+              {[labels.optionOne, labels.optionTwo, labels.optionThree].map((option, index, options) => (
+                <button
+                  key={option}
+                  type="button"
+                  role="menuitem"
+                  onClick={() => { setDropdownValue(option); closeDropdown(); }}
+                  onKeyDown={(event) => {
+                    if (event.key === "Escape") closeDropdown();
+                    if (event.key === "ArrowDown") {
+                      event.preventDefault();
+                      dropdownMenuRef.current?.querySelectorAll<HTMLButtonElement>('[role="menuitem"]')[Math.min(index + 1, options.length - 1)]?.focus();
+                    }
+                    if (event.key === "ArrowUp") {
+                      event.preventDefault();
+                      dropdownMenuRef.current?.querySelectorAll<HTMLButtonElement>('[role="menuitem"]')[Math.max(index - 1, 0)]?.focus();
+                    }
+                  }}
+                >
                   {option}
                 </button>
               ))}

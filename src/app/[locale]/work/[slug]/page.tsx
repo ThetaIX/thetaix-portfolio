@@ -35,6 +35,13 @@ export async function generateMetadata({
   return {
     title,
     description,
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      locale: locale === "ru" ? "ru_RU" : "en_US",
+      alternateLocale: locale === "ru" ? ["en_US"] : ["ru_RU"],
+    },
     alternates: {
       languages: {
         ru: `/ru/work/${project.key}`,

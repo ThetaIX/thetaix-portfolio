@@ -5,9 +5,9 @@
   --color-ink: #20211f;
   --color-lime: #d7ff3f;
   --color-coral: #ff765e;
-  --color-muted: #a6a39b;
+  --color-muted: #67655f;
   --color-border: color-mix(in srgb, var(--color-ink) 18%, transparent);
-  --color-focus: var(--color-coral);
+  --color-focus: var(--color-ink);
   --font-display: var(--font-space-grotesk);
   --font-body: var(--font-inter);
   --font-mono: var(--font-ibm-plex-mono);
@@ -47,6 +47,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
+  overflow-x: clip;
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
@@ -184,7 +185,7 @@ a {
 
 .language-switch {
   display: inline-flex;
-  height: 40px;
+  height: 50px;
   align-items: center;
   border: 1px solid var(--color-border);
   padding: 3px;
@@ -199,8 +200,8 @@ a {
 }
 
 .language-button {
-  min-width: 38px;
-  height: 32px;
+  min-width: 44px;
+  height: 44px;
   padding-inline: 8px;
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -214,8 +215,8 @@ a {
 
 .theme-button,
 .menu-button {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: inline-grid;
   place-items: center;
   border: 1px solid var(--color-border);
@@ -1008,6 +1009,37 @@ a {
   margin-bottom: 48px;
 }
 
+.not-found {
+  width: min(1440px, calc(100% - 128px));
+  min-height: calc(100svh - 161px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;
+  padding-block: 72px;
+}
+
+.not-found h1 {
+  max-width: 900px;
+  margin: 12px 0 20px;
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 9vw, 8rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.not-found > p:not(.case-number) {
+  max-width: 620px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.not-found-actions {
+  margin-top: 32px;
+}
+
 .experiment-description {
   max-width: 680px;
   margin: 20px 0 0;
@@ -1558,6 +1590,7 @@ a {
   .home-section,
   .case-study,
   .playground-page,
+  .not-found,
   .experiment-layout,
   .ui-playground-grid {
     width: calc(100% - 64px);
@@ -1678,6 +1711,7 @@ a {
   .home-section,
   .case-study,
   .playground-page,
+  .not-found,
   .experiment-layout,
   .ui-playground-grid {
     width: calc(100% - 40px);

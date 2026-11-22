@@ -25,7 +25,7 @@ export async function Header({ locale }: { locale: Locale }) {
             <span>THETAIX</span>
           </Link>
 
-          <nav className="desktop-nav" aria-label={locale === "ru" ? "Основная навигация" : "Main navigation"}>
+          <nav className="desktop-nav" aria-label={t("mainNavigation")}>
             {navigationItems.map((item) => (
               <Link
                 className="nav-link"
@@ -58,6 +58,7 @@ export async function Header({ locale }: { locale: Locale }) {
               labels={{
                 open: t("openMenu"),
                 close: t("closeMenu"),
+                mobileNavigation: t("mobileNavigation"),
                 work: t("work"),
                 playground: t("playground"),
                 about: t("about"),

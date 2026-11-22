@@ -29,6 +29,13 @@ export async function generateMetadata({
   return {
     title: t("title"),
     description: t("description"),
+    openGraph: {
+      type: "website",
+      title: t("title"),
+      description: t("description"),
+      locale: locale === "ru" ? "ru_RU" : "en_US",
+      alternateLocale: locale === "ru" ? ["en_US"] : ["ru_RU"],
+    },
     alternates: {
       languages: Object.fromEntries(
         routing.locales.map((language) => [language, `/${language}`]),

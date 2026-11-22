@@ -14,6 +14,7 @@ type MobileMenuProps = {
   labels: {
     open: string;
     close: string;
+    mobileNavigation: string;
     work: string;
     playground: string;
     about: string;
@@ -74,7 +75,7 @@ export function MobileMenu({ locale, labels }: MobileMenuProps) {
         className="mobile-navigation"
         hidden={!open}
       >
-        <nav aria-label={locale === "ru" ? "Мобильная навигация" : "Mobile navigation"}>
+        <nav aria-label={labels.mobileNavigation}>
           {navigationItems.map((item) => (
             <Link
               className="mobile-nav-link"

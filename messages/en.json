@@ -3,6 +3,12 @@
     "title": "Ilya Kuzin — Frontend Developer",
     "description": "Portfolio of Ilya Kuzin, a frontend developer."
   },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This page does not exist or the link is outdated.",
+    "backHome": "Go to homepage",
+    "back": "Go back"
+  },
   "foundation": {
     "title": "Ilya Kuzin",
     "description": "Frontend Developer"
@@ -14,7 +20,9 @@
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "skipToContent": "Skip to main content"
+    "skipToContent": "Skip to main content",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation"
   },
   "controls": {
     "language": "Language",

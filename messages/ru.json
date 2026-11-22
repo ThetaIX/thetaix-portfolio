@@ -3,6 +3,12 @@
     "title": "Ilya Kuzin — Frontend Developer",
     "description": "Портфолио Ильи Кузина, frontend-разработчика."
   },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Такой страницы не существует или ссылка устарела.",
+    "backHome": "На главную",
+    "back": "Назад"
+  },
   "foundation": {
     "title": "Ilya Kuzin",
     "description": "Frontend Developer"
@@ -14,7 +20,9 @@
     "contact": "Контакты",
     "openMenu": "Открыть меню",
     "closeMenu": "Закрыть меню",
-    "skipToContent": "Перейти к основному содержимому"
+    "skipToContent": "Перейти к основному содержимому",
+    "mainNavigation": "Основная навигация",
+    "mobileNavigation": "Мобильная навигация"
   },
   "controls": {
     "language": "Язык",

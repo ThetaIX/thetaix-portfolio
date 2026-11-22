@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
 import { getLocale } from "next-intl/server";
-import Script from "next/script";
 
 import "./globals.css";
 
@@ -42,9 +41,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
+        <script
           dangerouslySetInnerHTML={{ __html: themeScript }}
         />
       </head>
