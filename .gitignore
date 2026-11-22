@@ -4,7 +4,11 @@ out
 *.tsbuildinfo
 .env*
 !.env.example
+.vscode
+sources
+docs
 
 # Local development files
 .DS_Store
 Thumbs.db
+AGENTS.md
