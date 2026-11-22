@@ -44,7 +44,8 @@
       "eyebrow": "Selected work",
       "title": "Selected projects",
       "technologiesLabel": "Technologies",
-      "visit": "Visit website"
+      "visit": "Visit website",
+      "openCase": "Open case"
     },
     "projects": {
       "momenta": {
@@ -106,6 +107,108 @@
       "copied": "Copied",
       "copyFailed": "Could not copy",
       "cv": "Download CV"
+    }
+  },
+  "caseStudies": {
+    "label": "Project case study",
+    "back": "Back to projects",
+    "overview": "Overview",
+    "role": "My role",
+    "features": "Key features",
+    "gallery": "Gallery",
+    "stack": "Technology",
+    "visit": "Project link",
+    "projects": {
+      "momenta": {
+        "name": "Momenta",
+        "status": "Host removed",
+        "overview": "An AI photo-animation platform where users upload a photo, choose a motion style, and receive a finished video.",
+        "roleItems": [
+          "Interface for upload and generation.",
+          "Interface modals and error states.",
+          "Responsive landing-page blocks and localization.",
+          "Subscription and analytics interfaces."
+        ],
+        "featureItems": [
+          "Photo upload.",
+          "Motion-style selection.",
+          "Finished video generation."
+        ],
+        "galleryLanding": "Momenta landing page",
+        "galleryLogin": "Momenta login screen",
+        "galleryStyle": "Momenta motion-style selection"
+      },
+      "truestars": {
+        "name": "TrueStars",
+        "status": "Hosted",
+        "overview": "A SaaS reputation-management platform for businesses with reports, reviews, local promotion, visibility analytics, and employee bonuses.",
+        "roleItems": [
+          "Interface refactoring and localization.",
+          "Interface translation and adding languages.",
+          "Smart Tips filtering.",
+          "Report and business-settings styling."
+        ],
+        "featureItems": [
+          "Reputation and visibility reports.",
+          "Review management.",
+          "Business settings and Smart Tips filtering."
+        ],
+        "galleryDashboard": "TrueStars reports dashboard",
+        "gallerySettings": "TrueStars profile settings"
+      },
+      "lymediary": {
+        "name": "LymeDiary",
+        "status": "In development",
+        "overview": "A platform for people with Lyme disease to record symptoms and maintain a diary as part of everyday self-tracking, with a mobile application.",
+        "roleItems": [
+          "Mobile application with Expo and React Native.",
+          "Dashboard, check-in, profile, and diary screens.",
+          "Navigation, localization, and Zustand integration.",
+          "Scanner, art-therapy, and meditative activity screens.",
+          "Backend API integration."
+        ],
+        "featureItems": [
+          "Symptom check-ins and diary.",
+          "Mobile profile and dashboard screens.",
+          "Camera and analysis interfaces."
+        ],
+        "galleryLanding": "LymeDiary landing page",
+        "galleryDiary": "LymeDiary diary screen"
+      },
+      "besta": {
+        "name": "Besta",
+        "status": "Not hosted",
+        "overview": "An AI assistant for real estate agents and agencies that answers professional questions, manages CRM leads, helps prepare documents, and automates communication.",
+        "roleItems": [
+          "Responsive animated Hero blocks.",
+          "Mobile burger menu.",
+          "Chat-bubble and typing-text animations.",
+          "Localization, metadata, and interface elements."
+        ],
+        "featureItems": [
+          "Answers to professional questions.",
+          "CRM lead management.",
+          "Document preparation."
+        ],
+        "galleryLanding": "Besta landing page"
+      },
+      "hellodear": {
+        "name": "HelloDear",
+        "status": "Hosted",
+        "overview": "An AI service for friendly phone calls to older adults with concise care summaries for families and care teams. It works through an ordinary phone without an app.",
+        "roleItems": [
+          "Hero section and responsive layout.",
+          "CTA blocks and localization.",
+          "SEO schemas and metadata.",
+          "Sitemap."
+        ],
+        "featureItems": [
+          "Phone calls without an app.",
+          "Concise summaries for families.",
+          "Concise summaries for care teams."
+        ],
+        "galleryLanding": "HelloDear landing page"
+      }
     }
   }
 }

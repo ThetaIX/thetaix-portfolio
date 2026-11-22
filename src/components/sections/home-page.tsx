@@ -91,7 +91,11 @@ export async function HomePageSections({ locale }: { locale: Locale }) {
                 <span className="project-number">{project.number}</span>
               </div>
               <div className="project-card-content">
-                <h3>{t(`projects.${project.key}.name`)}</h3>
+                <h3>
+                  <Link href={`/work/${project.key}`}>
+                    {t(`projects.${project.key}.name`)}
+                  </Link>
+                </h3>
                 <p>{t(`projects.${project.key}.description`)}</p>
                 {project.technologies.length > 0 ? (
                   <ul className="project-technologies" aria-label={t("work.technologiesLabel")}>
@@ -100,16 +104,9 @@ export async function HomePageSections({ locale }: { locale: Locale }) {
                     ))}
                   </ul>
                 ) : null}
-                {project.url ? (
-                  <a
-                    className="project-external-link"
-                    href={project.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t("work.visit")} <span aria-hidden="true">↗</span>
-                  </a>
-                ) : null}
+                <Link className="project-external-link" href={`/work/${project.key}`}>
+                  {t("work.openCase")} <span aria-hidden="true">→</span>
+                </Link>
               </div>
             </article>
           ))}

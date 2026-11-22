@@ -18,12 +18,12 @@ Read these files before making changes:
 
 ## Current State
 
-- Phase 0, Phase 1, Phase 2, and Phase 3 are complete.
+- Phase 0, Phase 1, Phase 2, Phase 3, and Phase 4 are complete.
 - The home page is localized with `next-intl`.
 - The repository is on branch `dev`.
 - Remote is not configured.
 - `Next.js 16.4.6`, `React 19.3.1`, TypeScript strict, Tailwind CSS 4.
-- No project case page exists yet.
+- All five localized project case pages are implemented.
 - The home page currently lists five projects:
   - Momenta
   - TrueStars
