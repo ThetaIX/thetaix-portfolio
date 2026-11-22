@@ -210,5 +210,120 @@
         "galleryLanding": "Лендинг HelloDear"
       }
     }
+  },
+  "playground": {
+    "label": "Площадка",
+    "title": "Цифровая лаборатория",
+    "description": "Небольшие интерактивные эксперименты с градиентами, курсорами, анимацией и состояниями интерфейса.",
+    "back": "Назад к Playground",
+    "open": "Открыть эксперимент",
+    "gradient-studio": {
+      "title": "Gradient Studio",
+      "description": "Смешайте цвета и настройте живой CSS-градиент.",
+      "controls": {
+        "mode": "Режим градиента",
+        "linear": "Линейный",
+        "radial": "Радиальный",
+        "colorOne": "Первый цвет",
+        "colorTwo": "Второй цвет",
+        "angle": "Угол",
+        "preview": "Живой превью",
+        "cssLabel": "Готовый CSS",
+        "copy": "Копировать CSS",
+        "copied": "CSS скопирован",
+        "copyFailed": "Не удалось скопировать CSS",
+        "reset": "Сбросить"
+      }
+    },
+    "cursor-lab": {
+      "title": "Cursor Lab",
+      "description": "Активируйте курсорный эффект и попробуйте его в hover-зонах.",
+      "controls": {
+        "enable": "Включить курсор",
+        "disable": "Выключить курсор",
+        "reset": "Сбросить",
+        "variants": "Вариант курсора",
+        "dot": "Точка",
+        "ring": "Кольцо",
+        "cross": "Крест",
+        "hoverZones": "Интерактивные зоны курсора",
+        "zoneOne": "Зона наведения 01",
+        "zoneTwo": "Зона наведения 02",
+        "zoneThree": "Зона наведения 03",
+        "touchState": "Сенсорный режим: пользовательский курсор недоступен. Используйте кнопки зон наведения."
+      }
+    },
+    "shape-motion": {
+      "title": "Shape Motion",
+      "description": "Небольшое и ограниченное исследование движения.",
+      "controls": {
+        "shape": "Форма",
+        "circle": "Круг",
+        "square": "Квадрат",
+        "diamond": "Ромб",
+        "speed": "Скорость",
+        "slow": "Медленно",
+        "fast": "Быстро",
+        "direction": "Направление",
+        "clockwise": "По часовой",
+        "counterclockwise": "Против часовой",
+        "intensity": "Интенсивность",
+        "pause": "Пауза",
+        "play": "Воспроизвести",
+        "reset": "Сбросить",
+        "reducedMotion": "Включено уменьшенное движение: форма остаётся неподвижной."
+      }
+    },
+    "ui-playground": {
+      "title": "UI Playground",
+      "description": "Рабочие демонстрации распространённых интерфейсных паттернов.",
+      "controls": {
+        "buttons": "Кнопки",
+        "primaryAction": "Основное действие",
+        "secondaryAction": "Очистить",
+        "actionResult": "Основное действие выполнено",
+        "toggles": "Переключатели",
+        "toggleOne": "Уведомления",
+        "toggleTwo": "Компактный вид",
+        "tabs": "Вкладки",
+        "tabOne": "Обзор",
+        "tabTwo": "Детали",
+        "tabThree": "Заметки",
+        "tabOneContent": "Краткий обзор активной вкладки.",
+        "tabTwoContent": "Дополнительные детали выбранного элемента.",
+        "tabThreeContent": "Заметки и дополнительный контекст.",
+        "tooltipLabel": "Подсказка",
+        "tooltipText": "Полезный текст подсказки",
+        "dropdown": "Выпадающий список",
+        "dropdownOpen": "Открыть список",
+        "dropdownClose": "Закрыть список",
+        "optionOne": "Вариант один",
+        "optionTwo": "Вариант два",
+        "optionThree": "Вариант три",
+        "cards": "Карточки",
+        "cardOne": "Карточка один",
+        "cardTwo": "Карточка два",
+        "cardSelected": "Выбрано",
+        "loading": "Состояние загрузки",
+        "startLoading": "Запустить загрузку",
+        "stopLoading": "Остановить загрузку"
+      }
+    },
+    "gradient": {
+      "title": "Gradient Studio",
+      "description": "Смешайте цвета и настройте живой CSS-градиент."
+    },
+    "cursor": {
+      "title": "Cursor Lab",
+      "description": "Активируйте курсорный эффект и попробуйте его в hover-зонах."
+    },
+    "shape": {
+      "title": "Shape Motion",
+      "description": "Небольшое и ограниченное исследование движения."
+    },
+    "ui": {
+      "title": "UI Playground",
+      "description": "Рабочие демонстрации распространённых интерфейсных паттернов."
+    }
   }
 }

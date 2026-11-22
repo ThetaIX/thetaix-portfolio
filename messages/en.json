@@ -210,5 +210,120 @@
         "galleryLanding": "HelloDear landing page"
       }
     }
+  },
+  "playground": {
+    "label": "Playground",
+    "title": "Digital playground",
+    "description": "Small interactive experiments for gradients, cursors, motion, and interface states.",
+    "back": "Back to Playground",
+    "open": "Open experiment",
+    "gradient-studio": {
+      "title": "Gradient Studio",
+      "description": "Mix colors and shape a live CSS gradient.",
+      "controls": {
+        "mode": "Gradient mode",
+        "linear": "Linear",
+        "radial": "Radial",
+        "colorOne": "First color",
+        "colorTwo": "Second color",
+        "angle": "Angle",
+        "preview": "Live preview",
+        "cssLabel": "Generated CSS",
+        "copy": "Copy CSS",
+        "copied": "CSS copied",
+        "copyFailed": "Could not copy CSS",
+        "reset": "Reset"
+      }
+    },
+    "cursor-lab": {
+      "title": "Cursor Lab",
+      "description": "Opt into a cursor effect and try it inside the hover zones.",
+      "controls": {
+        "enable": "Enable cursor",
+        "disable": "Disable cursor",
+        "reset": "Reset",
+        "variants": "Cursor variant",
+        "dot": "Dot",
+        "ring": "Ring",
+        "cross": "Cross",
+        "hoverZones": "Interactive cursor hover zones",
+        "zoneOne": "Hover zone 01",
+        "zoneTwo": "Hover zone 02",
+        "zoneThree": "Hover zone 03",
+        "touchState": "Touch state: custom cursor is unavailable; use the hover-zone buttons instead."
+      }
+    },
+    "shape-motion": {
+      "title": "Shape Motion",
+      "description": "Explore a small, contained motion study.",
+      "controls": {
+        "shape": "Shape",
+        "circle": "Circle",
+        "square": "Square",
+        "diamond": "Diamond",
+        "speed": "Speed",
+        "slow": "Slow",
+        "fast": "Fast",
+        "direction": "Direction",
+        "clockwise": "Clockwise",
+        "counterclockwise": "Counterclockwise",
+        "intensity": "Intensity",
+        "pause": "Pause",
+        "play": "Play",
+        "reset": "Reset",
+        "reducedMotion": "Reduced motion is active: the shape remains stationary."
+      }
+    },
+    "ui-playground": {
+      "title": "UI Playground",
+      "description": "Working demonstrations of common interface patterns.",
+      "controls": {
+        "buttons": "Buttons",
+        "primaryAction": "Primary action",
+        "secondaryAction": "Clear",
+        "actionResult": "Primary action activated",
+        "toggles": "Toggles",
+        "toggleOne": "Notifications",
+        "toggleTwo": "Compact layout",
+        "tabs": "Tabs",
+        "tabOne": "Overview",
+        "tabTwo": "Details",
+        "tabThree": "Notes",
+        "tabOneContent": "A concise overview of the active tab.",
+        "tabTwoContent": "Additional details for the selected item.",
+        "tabThreeContent": "Notes and supporting context.",
+        "tooltipLabel": "Tooltip",
+        "tooltipText": "A useful tooltip message",
+        "dropdown": "Dropdown",
+        "dropdownOpen": "Open dropdown",
+        "dropdownClose": "Close dropdown",
+        "optionOne": "Option one",
+        "optionTwo": "Option two",
+        "optionThree": "Option three",
+        "cards": "Cards",
+        "cardOne": "Card one",
+        "cardTwo": "Card two",
+        "cardSelected": "Selected",
+        "loading": "Loading state",
+        "startLoading": "Start loading",
+        "stopLoading": "Stop loading"
+      }
+    },
+    "gradient": {
+      "title": "Gradient Studio",
+      "description": "Mix colors and shape a live CSS gradient."
+    },
+    "cursor": {
+      "title": "Cursor Lab",
+      "description": "Opt into a cursor effect and try it inside the hover zones."
+    },
+    "shape": {
+      "title": "Shape Motion",
+      "description": "Explore a small, contained motion study."
+    },
+    "ui": {
+      "title": "UI Playground",
+      "description": "Working demonstrations of common interface patterns."
+    }
   }
 }

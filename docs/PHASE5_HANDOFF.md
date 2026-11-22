@@ -35,6 +35,43 @@ Do not implement Phase 6 or later phases without a separate explicit approval.
 - Number4me must not be created or mentioned.
 - Existing Header, Footer, theme switch, language switch, metadata, design tokens, and responsive layout must be preserved.
 
+## State After Phase 5
+
+- Phase 5 is implemented and committed separately from unrelated untracked workspace files.
+- The Playground index is available at `/ru/playground` and `/en/playground`.
+- All four experiment pages are implemented in both locales:
+  - Gradient Studio
+  - Cursor Lab
+  - Shape Motion
+  - UI Playground
+- RU/EN dictionaries contain the Playground UI strings.
+- Navigation now links the Playground item to the localized `/playground` route.
+- Unknown Playground slugs use the existing Next.js not-found behavior.
+- `npm run lint`, `npm run typecheck`, and `npm run build` pass.
+- Production smoke tests passed for the locale roots, Playground index, all eight experiment routes, and an unknown slug 404.
+- Browser smoke checks passed for copy feedback, locale switching, mobile navigation, reduced motion, and horizontal overflow.
+
+## Phase 5 Files
+
+- `src/app/[locale]/playground/page.tsx`
+- `src/app/[locale]/playground/[slug]/page.tsx`
+- `src/components/playground/gradient-studio.tsx`
+- `src/components/playground/cursor-lab.tsx`
+- `src/components/playground/shape-motion.tsx`
+- `src/components/playground/ui-playground.tsx`
+- `src/components/playground/playground-index.tsx`
+- `src/components/playground/playground-experiment.tsx`
+- `messages/ru.json`
+- `messages/en.json`
+- `src/app/globals.css`
+- `src/config/navigation.ts`
+
+## Known Remaining Items
+
+- Theme switching, reset controls, and hydration behavior need an additional manual browser pass.
+- Next showed font preload warnings during browser automation; no hydration warning or runtime application error was observed.
+- No owner decision is required to retain the Phase 5 scope.
+
 ## Required Phase 5 Scope
 
 Implement:
