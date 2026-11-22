@@ -7,7 +7,7 @@ export async function Footer({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: "footer" });
 
   return (
-    <footer id="contact" className="site-footer">
+    <footer className="site-footer">
       <div className="footer-inner">
         <Link className="footer-brand" href="/" aria-label="ILYA / THETAIX">
           ILYA / THETAIX

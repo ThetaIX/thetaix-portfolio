@@ -27,5 +27,85 @@
   "footer": {
     "role": "Frontend Developer",
     "copyright": "© {year} Ilya Kuzin"
+  },
+  "home": {
+    "hero": {
+      "status": "Open to opportunities",
+      "title": "I build digital experiences, one interface at a time.",
+      "subtitle": "Frontend Developer — React / Next.js / TypeScript",
+      "intro": "I’m Ilya Kuzin. I create interfaces that bring visual precision together with thoughtful engineering.",
+      "viewWork": "View projects",
+      "contact": "Get in touch",
+      "portraitLabel": "THETAIX graphic mark",
+      "portraitAlt": "Ilya Kuzin",
+      "scrollLabel": "Go to selected projects"
+    },
+    "work": {
+      "eyebrow": "Selected work",
+      "title": "Selected projects",
+      "technologiesLabel": "Technologies",
+      "visit": "Visit website"
+    },
+    "projects": {
+      "momenta": {
+        "name": "Momenta",
+        "description": "A platform for AI-powered photo animation: upload a photo, choose a motion style, and create a finished video.",
+        "imageAlt": "Momenta landing page screenshot"
+      },
+      "truestars": {
+        "name": "TrueStars",
+        "description": "A SaaS platform for managing business reputation: reports, reviews, local analytics, and business tools.",
+        "imageAlt": "TrueStars reports dashboard screenshot"
+      },
+      "lymediary": {
+        "name": "LymeDiary",
+        "description": "A platform for symptom tracking, nutrition journaling, and treatment protocols with a mobile app.",
+        "imageAlt": "LymeDiary landing page screenshot"
+      },
+      "besta": {
+        "name": "Besta",
+        "description": "An AI assistant for real estate agents and agencies covering professional questions, CRM leads, and document preparation.",
+        "imageAlt": "Besta landing page screenshot"
+      },
+      "hellodear": {
+        "name": "HelloDear",
+        "description": "An AI service for friendly phone calls to older adults and concise care summaries for families and care teams.",
+        "imageAlt": "HelloDear landing page screenshot"
+      }
+    },
+    "playground": {
+      "eyebrow": "Experiments",
+      "title": "Digital playground",
+      "previewLabel": "Interactive experiment previews"
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "How I work",
+      "lead": "I build interfaces as complete digital products: from clear structure and typography to reliable implementation.",
+      "approach": "I’m interested in work where visual craft and engineering logic support one another. I hold a bachelor’s degree in Fundamental Informatics and Information Technologies from TSU.",
+      "educationLabel": "Education",
+      "education": "Tomsk State University",
+      "experienceLabel": "Experience",
+      "experience": "Remote web project work: autumn 2025 — summer 2026",
+      "photoAlt": "Ilya Kuzin"
+    },
+    "toolkit": {
+      "eyebrow": "Toolkit",
+      "title": "Technologies",
+      "groups": {
+        "languages": "Languages",
+        "frontend": "Frontend",
+        "data": "State & Data",
+        "tools": "Tools"
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let’s work together",
+      "copy": "Copy email",
+      "copied": "Copied",
+      "copyFailed": "Could not copy",
+      "cv": "Download CV"
+    }
   }
 }

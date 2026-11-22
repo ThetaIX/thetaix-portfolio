@@ -8,10 +8,10 @@
     "description": "Frontend Developer"
   },
   "navigation": {
-    "work": "Work",
+    "work": "Проекты",
     "playground": "Playground",
-    "about": "About",
-    "contact": "Contact",
+    "about": "Обо мне",
+    "contact": "Контакты",
     "openMenu": "Открыть меню",
     "closeMenu": "Закрыть меню",
     "skipToContent": "Перейти к основному содержимому"
@@ -27,5 +27,85 @@
   "footer": {
     "role": "Frontend Developer",
     "copyright": "© {year} Ilya Kuzin"
+  },
+  "home": {
+    "hero": {
+      "status": "Открыт к предложениям",
+      "title": "Создаю цифровые продукты, продумывая каждую деталь интерфейса.",
+      "subtitle": "Frontend Developer — React / Next.js / TypeScript",
+      "intro": "Меня зовут Илья Кузин. Я разрабатываю интерфейсы, соединяя визуальную точность с инженерной реализацией.",
+      "viewWork": "Смотреть проекты",
+      "contact": "Связаться",
+      "portraitLabel": "Графический знак THETAIX",
+      "portraitAlt": "Илья Кузин",
+      "scrollLabel": "Перейти к выбранным проектам"
+    },
+    "work": {
+      "eyebrow": "Избранные работы",
+      "title": "Выбранные проекты",
+      "technologiesLabel": "Технологии",
+      "visit": "Перейти на сайт"
+    },
+    "projects": {
+      "momenta": {
+        "name": "Momenta",
+        "description": "Платформа для анимации фотографий с помощью AI: загрузка фото, выбор стиля движения и создание готового видео.",
+        "imageAlt": "Скриншот лендинга Momenta"
+      },
+      "truestars": {
+        "name": "TrueStars",
+        "description": "SaaS-платформа для управления репутацией бизнеса: отчёты, отзывы, локальная аналитика и инструменты для бизнеса.",
+        "imageAlt": "Скриншот панели отчётов TrueStars"
+      },
+      "lymediary": {
+        "name": "LymeDiary",
+        "description": "Платформа для симптомов, дневника питания и протоколов лечения с мобильным приложением.",
+        "imageAlt": "Скриншот лендинга LymeDiary"
+      },
+      "besta": {
+        "name": "Besta",
+        "description": "AI-ассистент для риелторов и агентств недвижимости с ответами на профессиональные вопросы и CRM-лидами.",
+        "imageAlt": "Скриншот лендинга Besta"
+      },
+      "hellodear": {
+        "name": "HelloDear",
+        "description": "AI-сервис дружеских телефонных звонков пожилым людям и формирования кратких care-сводок.",
+        "imageAlt": "Скриншот лендинга HelloDear"
+      }
+    },
+    "playground": {
+      "eyebrow": "Эксперименты",
+      "title": "Цифровая лаборатория",
+      "previewLabel": "Превью интерактивных экспериментов"
+    },
+    "about": {
+      "eyebrow": "Обо мне",
+      "title": "О подходе",
+      "lead": "Я создаю интерфейсы как целостные digital-продукты: от ясной структуры и типографики до устойчивой реализации.",
+      "approach": "Интересны задачи, где визуальная часть и инженерная логика работают вместе. Бакалавр Фундаментальной информатики и информационных технологий ТГУ.",
+      "educationLabel": "Образование",
+      "education": "Томский государственный университет",
+      "experienceLabel": "Опыт",
+      "experience": "Удалённая работа над веб-проектами: осень 2025 — лето 2026",
+      "photoAlt": "Илья Кузин"
+    },
+    "toolkit": {
+      "eyebrow": "Инструменты",
+      "title": "Технологии",
+      "groups": {
+        "languages": "Languages",
+        "frontend": "Frontend",
+        "data": "State & Data",
+        "tools": "Tools"
+      }
+    },
+    "contact": {
+      "eyebrow": "Контакты",
+      "title": "Давайте работать вместе",
+      "copy": "Копировать email",
+      "copied": "Скопировано",
+      "copyFailed": "Не удалось скопировать",
+      "cv": "Скачать CV"
+    }
   }
 }

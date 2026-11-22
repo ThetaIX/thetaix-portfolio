@@ -25,7 +25,6 @@ function routeForLocale(locale: Locale) {
     /^\/about\/?$/,
     /^\/playground\/?$/,
     /^\/playground\/(gradient-studio|cursor-lab|shape-motion|ui-playground)\/?$/,
-    /^\/work\/(momenta|truestars|lymediary|number4me)\/?$/,
   ];
   const normalizedPath = relativePath === "/" ? "/" : relativePath.replace(/\/$/, "");
   const translatedRouteExists = knownRoutes.some((pattern) => pattern.test(normalizedPath));
