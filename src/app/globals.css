@@ -4,6 +4,7 @@
   --color-paper: #f3f0e9;
   --color-ink: #20211f;
   --color-lime: #d7ff3f;
+  --color-status-dot: #86a900;
   --color-coral: #ff765e;
   --color-muted: #67655f;
   --color-border: color-mix(in srgb, var(--color-ink) 18%, transparent);
@@ -17,6 +18,7 @@
   --color-paper: #20211f;
   --color-ink: #f3f0e9;
   --color-lime: #d7ff3f;
+  --color-status-dot: #d7ff3f;
   --color-coral: #ff8b76;
   --color-muted: #b7b4aa;
   --color-border: color-mix(in srgb, var(--color-ink) 24%, transparent);
@@ -332,12 +334,12 @@ a {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   align-items: center;
   gap: 24px;
-  padding-block: 72px 88px;
+  padding-block: 72px 60px;
 }
 
 .hero-copy {
   grid-column: 1 / span 8;
-  max-width: 860px;
+  max-width: 1000px;
 }
 
 .eyebrow,
@@ -361,15 +363,15 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--color-lime);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-lime) 24%, transparent);
+  background: var(--color-status-dot);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-status-dot) 24%, transparent);
 }
 
 .hero-copy h1 {
-  max-width: 820px;
+  /* max-width: 820px; */
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(3.4rem, 6.4vw, 6.8rem);
+  font-size: clamp(3.4rem, 6vw, 6.4rem);
   line-height: 0.94;
   letter-spacing: -0.065em;
   text-wrap: balance;
@@ -431,16 +433,105 @@ a {
   grid-column: 10 / -1;
   position: relative;
   aspect-ratio: 4 / 5;
-  align-self: end;
+  align-self: center;
   overflow: hidden;
-  border: 1px solid var(--color-ink);
-  background: var(--color-coral);
-  color: #20211f;
+  background: transparent;
+  transform: translate(-40,0)
 }
 
-.hero-portrait-image {
-  object-fit: cover;
-  object-position: center 38%;
+.hero-theta {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hero-theta-morph {
+  transform-origin: 256px 256px;
+  animation: theta-morph 6s ease-in-out infinite;
+}
+
+.hero-theta-circle,
+.hero-theta-axis {
+  stroke: var(--color-coral);
+  vector-effect: non-scaling-stroke;
+}
+
+.hero-theta-circle {
+  stroke-width: 24;
+  filter: drop-shadow(0 0 0 transparent);
+  transition: filter 500ms ease, transform 500ms ease;
+}
+
+.hero-theta-axis {
+  stroke-width: 24;
+  stroke-linecap: butt;
+  transform-origin: 256px 256px;
+  transition: transform 90ms linear;
+}
+
+@media (max-width: 1024px) {
+  .hero-theta-circle {
+    stroke-width: 22;
+  }
+
+  .hero-theta-axis {
+    stroke-width: 20;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-theta-circle {
+    stroke-width: 16;
+  }
+
+  .hero-theta-axis {
+    stroke-width: 14;
+  }
+}
+
+.hero-portrait:hover .hero-theta-morph {
+  animation-play-state: paused;
+  transform: scale(1.04) rotate(2deg);
+  transition: transform 500ms ease;
+}
+
+.hero-portrait:hover .hero-theta-circle {
+  filter: drop-shadow(0 10px 18px color-mix(in srgb, var(--color-coral) 32%, transparent));
+}
+
+.hero-theta-pupil {
+  transform-origin: 256px 256px;
+  transition: transform 90ms linear;
+}
+
+.hero-theta-pupil rect {
+  fill: var(--color-lime);
+  stroke: var(--color-lime);
+}
+
+.hero-theta-pupil polygon {
+  fill: var(--color-lime);
+  stroke: var(--color-lime);
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+@keyframes theta-morph {
+  0%,
+  100% {
+    transform: scale(0.96) rotate(-1deg);
+  }
+  25% {
+    transform: scale(0.92) rotate(1deg);
+  }
+  50% {
+    transform: scale(1.04) rotate(-0.5deg);
+  }
+  75% {
+    transform: scale(0.98) rotate(0.5deg);
+  }
 }
 
 .scroll-indicator {
@@ -860,11 +951,11 @@ a {
 .about-photo img {
   object-fit: cover;
   object-position: center 38%;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 .about-lead {
-  grid-column: 5 / span 4;
+  grid-column: 5 / span 7;
   margin: 0;
   font-family: var(--font-display);
   font-size: clamp(2.1rem, 3.8vw, 4.2rem);
@@ -873,7 +964,7 @@ a {
 }
 
 .about-details {
-  grid-column: 8 / -1;
+  grid-column: 6 / -1;
 }
 
 .about-details > p {

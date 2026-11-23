@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     fill="none"
+     role="img"
+     aria-labelledby="title">
+  <title id="title">Theta symbol</title>
+  <ellipse
+    cx="256"
+    cy="256"
+    rx="145"
+    ry="226"
+    stroke="#ff765e"
+    stroke-width="28"
+  />
+  <path
+    d="M111 256H401"
+    stroke="#ff765e"
+    stroke-width="24"
+    stroke-linecap="butt"
+  />
+</svg>

@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 import { CopyEmailButton } from "./copy-email-button";
+import { HeroTheta } from "./hero-theta";
 
 export async function HomePageSections({ locale }: { locale: Locale }) {
   const t = await getTranslations({ locale, namespace: "home" });
@@ -52,20 +53,11 @@ export async function HomePageSections({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="hero-portrait" aria-label={t("hero.portraitLabel")}>
-            <Image
-              className="hero-portrait-image"
-              src="/profile/profile-photo.jpg"
-              alt={t("hero.portraitAlt")}
-              fill
-              sizes="(max-width: 640px) 66vw, (max-width: 1024px) 25vw, 20vw"
-              priority
-            />
-          </div>
+          <HeroTheta label={t("hero.portraitLabel")} />
         </div>
-        <Link className="scroll-indicator" href="/#work" aria-label={t("hero.scrollLabel")}>
+        {/* <Link className="scroll-indicator" href="/#work" aria-label={t("hero.scrollLabel")}>
           <span aria-hidden="true">↓</span>
-        </Link>
+        </Link> */}
       </section>
 
       <section id="work" className="home-section work-section" aria-labelledby="work-title">
@@ -113,7 +105,7 @@ export async function HomePageSections({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section id="playground" className="home-section playground-section" aria-labelledby="playground-title">
+      {/* <section id="playground" className="home-section playground-section" aria-labelledby="playground-title">
         <header className="section-heading">
           <p className="section-index">02 / {t("playground.eyebrow")}</p>
           <h2 id="playground-title">{t("playground.title")}</h2>
@@ -133,7 +125,7 @@ export async function HomePageSections({ locale }: { locale: Locale }) {
             <span />
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="about" className="home-section about-section" aria-labelledby="about-title">
         <header className="section-heading">
@@ -191,12 +183,12 @@ export async function HomePageSections({ locale }: { locale: Locale }) {
           <h2 id="contact-title">{t("contact.title")}</h2>
         </header>
         <div className="contact-links">
-          <a className="contact-email" href={`mailto:${contactsConfig.email}`}>
+          {/* <a className="contact-email" href={`mailto:${contactsConfig.email}`}>
             {contactsConfig.email}
-          </a>
+          </a> */}
           <CopyEmailButton
             email={contactsConfig.email}
-            label={t("contact.copy")}
+            label={contactsConfig.email}
             copiedLabel={t("contact.copied")}
             failedLabel={t("contact.copyFailed")}
           />

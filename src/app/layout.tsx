@@ -29,6 +29,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://thetaix-portfolio.vercel.app"),
   title: "Ilya Kuzin — Frontend Developer",
   description: "Portfolio of Ilya Kuzin, a frontend developer.",
+  icons: {
+    icon: [
+      {
+        url: "/thetaix-theta-logo.svg",
+        type: "image/svg+xml",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
@@ -43,7 +51,7 @@ export default async function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
-      <head>
+      <head suppressHydrationWarning>
         <script
           dangerouslySetInnerHTML={{ __html: themeScript }}
         />
