@@ -9,7 +9,7 @@
   --color-muted: #67655f;
   --color-border: color-mix(in srgb, var(--color-ink) 18%, transparent);
   --color-focus: var(--color-ink);
-  --font-display: var(--font-space-grotesk);
+  --font-display: var(--font-onest);
   --font-body: var(--font-inter);
   --font-mono: var(--font-ibm-plex-mono);
 }
@@ -156,7 +156,7 @@ a {
   position: relative;
   padding-block: 28px;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .nav-link::after {
@@ -292,7 +292,7 @@ a {
   padding-inline: 12px;
   font-family: var(--font-display);
   font-size: 1.125rem;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .mobile-nav-link:last-child {
@@ -426,7 +426,7 @@ a {
 
 .text-action {
   border-bottom: 1px solid var(--color-ink);
-  font-weight: 650;
+  font-weight: 500;
 }
 
 .hero-portrait {
@@ -1027,7 +1027,7 @@ a {
   list-style: none;
   font-family: var(--font-display);
   font-size: 1.25rem;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .contact-section {

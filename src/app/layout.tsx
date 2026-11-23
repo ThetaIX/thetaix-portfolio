@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inter, Space_Grotesk } from "next/font/google";
+import { IBM_Plex_Mono, Inter, Onest } from "next/font/google";
 import { getLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-space-grotesk",
+const onest = Onest({
+  subsets: ["latin", "cyrillic"],
+  weight: ["700", "800"],
+  variable: "--font-onest",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
+  weight: ["400", "500"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -48,7 +50,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${spaceGrotesk.variable} ${inter.variable} ${ibmPlexMono.variable}`}
+      className={`${onest.variable} ${inter.variable} ${ibmPlexMono.variable}`}
       suppressHydrationWarning
     >
       <head suppressHydrationWarning>
